@@ -1,8 +1,8 @@
 'use strict';
 console.log('ready');
 
-var name = window.prompt("Enter your name: ");
-alert('Hello ' + name + '!' + ' Welcome to Patriot Woodworking!');
+var person = window.prompt("Enter your name: ");
+alert('Hello ' + person + '!' + ' Welcome to Patriot Woodworking!');
 
 var name = prompt('Are you a veteran or currently serving in the armed forces?').toLowerCase().trim();
 // variable declaration for the response to being a veteran
@@ -15,3 +15,4 @@ if(name === 'yes'){
   alert('Something went wrong.  Please refresh the page and select "yes or no"');
 }
 document.getElementById('discount-placeholder').textContent = welcome;
+
