@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('ready');
 var name = prompt('Are you a veteran or currently serving in the armed forces?');
 
 // variable declaration for the response to being a veteran
@@ -12,4 +12,4 @@ if(name === 'yes'){
 } else {
   welcome = 'Something went wrong.  Please select "yes or no"';
 }
-console.log(welcome);
+document.write(welcome);
