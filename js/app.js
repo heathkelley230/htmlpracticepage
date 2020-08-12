@@ -10,7 +10,7 @@ var welcome;
 if(name === 'yes'){
   welcome = 'Thank you for your service.  Please enjoy a 20% discount for any items purchased using the code "truepatriot".';
 } else if (name === 'no'){
-  welcome = 'We contribute 20% of all purchases to the Wounded Warrior Association.';
+  welcome = 'Thank you for viewing our Website.  We contribute 20% of all purchases to the Wounded Warrior Association.';
 } else {
   alert('Something went wrong.  Please refresh the page and select "yes or no"');
 }
