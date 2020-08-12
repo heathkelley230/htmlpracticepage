@@ -63,3 +63,6 @@ h2 {
     padding-top: 4px;
     padding-bottom: 4px;
 }
+#discount-placeholder {
+    font-size: 3rem; color: #B22234;
+}

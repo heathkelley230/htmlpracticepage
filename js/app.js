@@ -8,6 +8,6 @@ if(name === 'yes'){
 } else if (name === 'no'){
   welcome = 'We contribute 20% of all purchases to the Wounded Warrior Association.';
 } else {
-  welcome = 'Something went wrong.  Please select "yes or no"';
+  welcome = 'Something went wrong.  Please refresh the page and select "yes or no"';
 }
 document.getElementById('discount-placeholder').textContent = welcome;
