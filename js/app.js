@@ -14,4 +14,4 @@ if(name === 'yes'){
 } else {
   alert('Something went wrong.  Please refresh the page and select "yes or no"');
 }
-document.getElementById('discount-placeholder').textContent = welcome;
+document.getElementById('discount-placeholder').textContent '<h4 style="color:red>' = welcome;
