@@ -63,6 +63,8 @@ h2 {
     padding-top: 4px;
     padding-bottom: 4px;
 }
-#javascriptmessage {
-    font-size: 1.3rem; color: #B22234;
+#discount-placeholder {
+    font-size: 1.3rem;
+    color: #B22234;
+    line-height: 1.2em;
 }
