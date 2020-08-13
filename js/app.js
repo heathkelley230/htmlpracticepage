@@ -15,4 +15,3 @@ if(name === 'yes'){
   alert('Something went wrong.  Please refresh the page and select "yes or no"');
 }
 document.getElementById('discount-placeholder').textContent = welcome;
-
