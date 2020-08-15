@@ -73,10 +73,16 @@ h2 {
 
 .formwrapper{
     max-width: 900;
-    width: 50%;
+    width: 100%;
 	border: thick solid #3C3B6E;
-	
+  background-image: url("../images/barnamerican.jpg");
+  min-height: 380px;
+  background-position: center;
+  background-size: cover;
+  padding: 50px 225px 25px; 
 }
+.input_field {
+	background: #3C3B6E}
 
 #error_message{
   margin-bottom: 20px;
@@ -95,7 +101,12 @@ h2 {
     height: 75px;
 }
 
-#contactusheading {text-align: center}
+#contactusheading {text-align: center; background: #B22234; color: #FFFFFF}
 
-.input_field {padding: 10px 10px;
+.input_field {
+    padding: 15px;
+    border: medium solid #B22234;
+    border-radius: 3px
+#B22234;
 }
+

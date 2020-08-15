@@ -23,7 +23,6 @@ else if (name === 'no'){
 document.getElementById('discount-placeholder').textContent = welcome;
 
 //Begin Form 
-
   
 function validate(){
   var name = document.getElementById("name").value;
