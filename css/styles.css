@@ -68,3 +68,34 @@ h2 {
     color: #B22234;
     line-height: 1.2em;
 }
+
+/*Start of Form CSS*/
+
+.formwrapper{
+    max-width: 900;
+    width: 50%;
+	border: thick solid #3C3B6E;
+	
+}
+
+#error_message{
+  margin-bottom: 20px;
+  background: #fe8b8e;
+  padding: 0px;
+  text-align: left;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+#name, #subject, #phone, #email, #message   {
+    width: 100%; padding-left: 10px;
+}
+
+#message {
+    height: 75px;
+}
+
+#contactusheading {text-align: center}
+
+.input_field {padding: 10px 10px;
+}
