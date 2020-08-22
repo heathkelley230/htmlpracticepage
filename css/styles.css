@@ -109,3 +109,8 @@ h2 {
 #B22234;
 }
 
+#calculator {
+    width: "400";
+border: "1"; cellpadding: "5"; 
+    text-align: center; 
+}

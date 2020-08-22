@@ -7,6 +7,7 @@ var service = askAboutService();
 if(service === 'yes') {
 
 //years served validation
+
   var years = yearsserved();
   var discount = 0;
   if(years <=24){
@@ -17,10 +18,26 @@ if(service === 'yes') {
       discountplaceholder.textContent = 'Thank you for your service.  Please enjoy 20% off of your purchase.';
       discount = 0.20;
     }
-
 } else{
   discountplaceholder.textContent = 'Thank you for viewing our Website.  We contribute 10% of all purchases to the Wounded Warrior Association.';
 } 
+
+//Begin Calculation Table
+var total_items = 3;
+var itemID;
+function CalculateItemsValue() {
+	var total = 0;
+	for (var i=1; i<=total_items; i++) {
+		itemID = document.getElementById("qnt_"+i);
+		if (typeof itemID === 'undefined' || itemID === null) {
+			alert("No such item - " + "qnt_"+i);
+		} else {
+			total = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price")) * (1 - discount);
+		}
+	}
+	document.getElementById("ItemsTotal").innerHTML = "$" + total;
+}
+//End Calculation Table
 
 function yearsserved() {
   var yearsquestion = 'How many years have you served?';
@@ -62,3 +79,4 @@ function validateYesNo(question, input) {
   }
   return input;
 }
+
