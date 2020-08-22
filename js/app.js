@@ -19,7 +19,7 @@ if(service === 'yes') {
       discount = 0.20;
     }
 } else{
-  discountplaceholder.textContent = 'Thank you for viewing our Website.  We contribute 10% of all purchases to the Wounded Warrior Association.';
+  discountplaceholder.textContent = 'Thank you for viewing our Website.  We contribute 10% of all purchases to the Wounded Warrior Association.'; discount = 0.0;
 } 
 
 //Begin Calculation Table
