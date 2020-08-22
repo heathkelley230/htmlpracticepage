@@ -1,56 +1,64 @@
 'use strict';
+var discountplaceholder = document.getElementById('discountplaceholder');
+var person = askForName();
+alert('Hello ' + person + '! Welcome to Patriot Woodworking!');
+var service = askAboutService();
 
-var person = window.prompt("Enter your name: ");
-alert('Hello ' + person + '!' + ' Welcome to Patriot Woodworking!');
-var name = prompt('Are you a veteran or currently serving in the armed forces?').toLowerCase().trim();
-var welcome;
-if(name === 'yes'){
-  welcome = 'Thank you for your service ' + person + '. ';
-  var years = prompt(person + ', how many total years of active duty have you served?');
-  if(years >= 10){
-    welcome += 'Enjoy 20% off of all merchandise using the code "truepatriot" at checkout.';
-  } else if(years >= 5){
-    welcome += 'Enjoy 15% off of all merchandise using the code "eaglenest" at checkout.'; 
-  } else {
-    welcome += 'Enjoy 10% off of all merchandise.';
-  } 
+if(service === 'yes') {
+
+//years served validation
+  var years = yearsserved();
+  var discount = 0;
+  if(years <=24){
+      discountplaceholder.textContent = 'Thank you for your service.  Please enjoy 15% off your purchase.';
+      discount = 0.15;
+    }
+    else if(years >=25){
+      discountplaceholder.textContent = 'Thank you for your service.  Please enjoy 20% off of your purchase.';
+      discount = 0.20;
+    }
+
+} else{
+  discountplaceholder.textContent = 'Thank you for viewing our Website.  We contribute 10% of all purchases to the Wounded Warrior Association.';
 } 
-else if (name === 'no'){
-  welcome = 'Thank you for viewing our Website.  We contribute 10% of all purchases to the Wounded Warrior Association.';
-} else {
-  alert('Something went wrong.  Please refresh the page and select "yes or no".');
-}
-document.getElementById('discount-placeholder').textContent = welcome;
 
-//Begin Form 
-  
-function validate(){
-  var name = document.getElementById("name").value;
-  var phone = document.getElementById("phone").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
-  var error_message = document.getElementById("error_message");
-  
-  var text;
-  if(name.length < 5){
-    text = "Please Enter valid Name";
-    error_message.innerHTML = text;
-    return false;
+function yearsserved() {
+  var yearsquestion = 'How many years have you served?';
+  var years = cleanUp(prompt(yearsquestion));
+  years = validateyears(yearsquestion, years);
+  return years;
+}
+
+function validateyears (yearsquestion, inputyears) {
+  while(inputyears <0 || inputyears >100) {
+    alert ('Please enter a valid number 1-99.');
+    inputyears = cleanUp(prompt(yearsquestion));
   }
-  if(isNaN(phone) || phone.length != 10){
-    text = "Please Enter valid Phone Number";
-    error_message.innerHTML = text;
-    return false;
+  return inputyears;
+}
+
+//section for name and whether they have served
+
+function askForName() {
+  var person = prompt("Enter your name: ");
+  return person;
+}
+
+function askAboutService() {
+  var question = 'Are you a veteran or currently serving in the armed forces?';
+  var service = cleanUp(prompt(question));
+  service = validateYesNo(question, service);
+  return service;
+}
+
+function cleanUp (input) {
+  return input.toLowerCase().trim();
+}
+
+function validateYesNo(question, input) {
+  while(input !== 'yes' && input !== 'no') {
+    alert ('Please enter a yes or no answer.');
+    input = cleanUp(prompt(question));
   }
-  if(email.indexOf("@") == -1 || email.length < 6){
-    text = "Please Enter valid Email";
-    error_message.innerHTML = text;
-    return false;
-  }
-  if(message.length >= 400){
-    text = "Please Enter Less Than 400 Characters";
-    error_message.innerHTML = text;
-    return false;
-  }
-  alert("Form Submitted Successfully!");
+  return input;
 }
