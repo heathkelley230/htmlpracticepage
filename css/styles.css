@@ -63,7 +63,7 @@ h2 {
     padding-top: 4px;
     padding-bottom: 4px;
 }
-#discount-placeholder {
+#discountplaceholder {
     font-size: 1.3rem;
     color: #B22234;
     line-height: 1.2em;
@@ -110,7 +110,16 @@ h2 {
 }
 
 #calculator {
-    width: "400";
-border: "1"; cellpadding: "5"; 
-    text-align: center; 
+    width: "500";
+    border: thick solid #3C3B6E;
+    cellpadding: "10";
+    text-align: center;
 }
+.itemtitle {
+    background-color: #3C3B6E;
+    color: #FFFFFF;
+}
+.totalcolor {
+    background-color: #B22234;
+}
+.flagpicturetable {float:right;}
