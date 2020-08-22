@@ -31,8 +31,7 @@ function CalculateItemsValue() {
 		itemID = document.getElementById("qnt_"+i);
 		if (typeof itemID === 'undefined' || itemID === null) {
 			alert("No such item - " + "qnt_"+i);
-		} else {
-			total = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price")) * (1 - discount);
+		} else {total = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price")) * (1 - discount);
 		}
 	}
 	document.getElementById("ItemsTotal").innerHTML = "$" + total;
